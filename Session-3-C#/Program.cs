@@ -177,6 +177,34 @@ namespace Session_3_C_
             */
             #endregion
 
+            #region question16
+            //Write a program that takes character from the user then if it is a vowel chars (a,e,I,o,u) then print (vowel) otherwise print 
+            Console.WriteLine("Please enter a character:");
+            bool isCharValid = char.TryParse(Console.ReadLine(), out char inputChar);
+           
+            if (isCharValid)
+            {
+                char vowel = char.ToLower(inputChar);
+                switch (vowel)
+                {
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':
+                        Console.WriteLine("vowel");
+                        break;
+                    default:
+                        Console.WriteLine("not vowel");
+                        break;
+                }
+            }
+            else
+            {
+               Console.WriteLine(" Please enter a valid character.");
+            }
+            
+            #endregion
         }
     }
 }
