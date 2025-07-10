@@ -229,6 +229,7 @@ namespace Session_3_C_
             //  Write a program that takes 3 integers from the user then prints the max element and the min element.
 
             // first approach
+            /*
             Console.WriteLine("Please enter the first number:");
             bool isFirstValid = int.TryParse(Console.ReadLine(), out int firstNumber);
             Console.WriteLine("Please enter the second number:");
@@ -245,7 +246,49 @@ namespace Session_3_C_
             {
                 Console.WriteLine("Please enter valid numbers.");
             }
+            */
 
+            // second approach
+
+            Console.WriteLine("Please enter the first number:");
+            bool isFirstValid = int.TryParse(Console.ReadLine(), out int firstNumber);
+            Console.WriteLine("Please enter the second number:");
+            bool isSecondValid = int.TryParse(Console.ReadLine(), out int secondNumber);
+            Console.WriteLine("Please enter the third number:");
+            bool isThirdValid = int.TryParse(Console.ReadLine(), out int thirdNumber);
+            if (isFirstValid && isSecondValid && isThirdValid)
+            {
+                int max = firstNumber;
+                int min = firstNumber;
+
+                // max
+                if (secondNumber > max)
+                {
+                    max = secondNumber;
+                }
+                if (thirdNumber > max)
+                {
+                    max = thirdNumber;
+                }
+
+                // min
+                if (secondNumber < min)
+                {
+                    min = secondNumber;
+                }
+                if (thirdNumber < min)
+                {
+                    min = thirdNumber;
+                }
+
+                Console.WriteLine($"Max: {max}, Min: {min}");
+
+
+            }
+            else
+            {
+                Console.WriteLine("Please enter valid numbers.");
+            }
             #endregion
 
             #region question15
