@@ -1,4 +1,7 @@
-﻿namespace Session_3_C_
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+
+namespace Session_3_C_
 {
     internal class Program
     {
@@ -137,7 +140,7 @@
 
             #region question12
             //Write a program that takes a number from the user then print yes if that number can be divided by 3 and 4 otherwise print no.
-
+            /*
             Console.WriteLine("please enter the number");
             bool isNumberValid = int.TryParse(Console.ReadLine(), out int number);
             if (isNumberValid)
@@ -150,7 +153,18 @@
                 Console.WriteLine("Invalid input. Please enter a valid number.");
 
             }
+            */
             #endregion
+
+            #region question13
+            //Write a program that allows the user to insert an integer then print negative if it is negative number otherwise print positive.
+            Console.WriteLine("please enter the number");
+            bool isInputValid = double.TryParse(Console.ReadLine(), out double inputNumber);
+            string message= isInputValid ? (inputNumber < 0 ? "negative" : "positive") : "Invalid input. Please enter a valid number.";
+            Console.WriteLine(message);
+            #endregion
+
+
         }
     }
 }
