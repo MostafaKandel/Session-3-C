@@ -56,6 +56,7 @@ namespace Session_3_C_
 
             #region question3
             //Write C# program that Perform a simple arithmetic operation with floating-point numbers And mention what will happen
+            /*
             int a = 10;
             int b = 20;
             double c = 3.5;
@@ -66,7 +67,7 @@ namespace Session_3_C_
             int divid= a/c; // in this case,  compile-time error, because i try to store the double result in an integer variable.
             double divid2= b/c; // in this case, the result will be a double.
 
-
+            */
             #endregion
 
             #region question4
@@ -222,6 +223,29 @@ namespace Session_3_C_
             string message= isInputValid ? (inputNumber < 0 ? "negative" : "positive") : "Invalid input. Please enter a valid number.";
             Console.WriteLine(message);
             */
+            #endregion
+
+            #region question14
+            //  Write a program that takes 3 integers from the user then prints the max element and the min element.
+
+            // first approach
+            Console.WriteLine("Please enter the first number:");
+            bool isFirstValid = int.TryParse(Console.ReadLine(), out int firstNumber);
+            Console.WriteLine("Please enter the second number:");
+            bool isSecondValid = int.TryParse(Console.ReadLine(), out int secondNumber);
+            Console.WriteLine("Please enter the third number:");
+            bool isThirdValid = int.TryParse(Console.ReadLine(), out int thirdNumber);
+            if (isFirstValid && isSecondValid && isThirdValid)
+            {
+                int max = Math.Max(firstNumber, Math.Max(secondNumber, thirdNumber));
+                int min = Math.Min(firstNumber, Math.Min(secondNumber, thirdNumber));
+                Console.WriteLine($"Max: {max}, Min: {min}");
+            }
+            else
+            {
+                Console.WriteLine("Please enter valid numbers.");
+            }
+
             #endregion
 
             #region question15
