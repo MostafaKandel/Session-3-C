@@ -49,7 +49,13 @@ namespace Session_3_C_
             //Write C# program that Perform a simple arithmetic operation with floating-point numbers And mention what will happen
             #endregion
 
-          
+            #region question4
+            //Write C# program that Extract a substring from a given string
+            string originalString = "Hello";
+            string subString = originalString.Substring(0, 3); // extracting the sub string 'Hel'
+            Console.WriteLine($"sub string: {subString}");
+
+            #endregion
 
             #region question7
             //Write C# program that take two string variables and print them as one variable 
