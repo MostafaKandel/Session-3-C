@@ -167,14 +167,16 @@ namespace Session_3_C_
             */
             #endregion
 
-            #region question14
+            #region question15
             //Write a program that allows the user to insert an integer number then check If a number is even or odd.
-
+            /*
             Console.WriteLine("please enter the number");
             bool isInputValid = int.TryParse(Console.ReadLine(), out int inputNumber); 
             string message = isInputValid ? (inputNumber % 2 == 0 ? "even" : "odd") : "Please enter a valid number.";
             Console.WriteLine(message);
+            */
             #endregion
+
         }
     }
 }
