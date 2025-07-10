@@ -118,7 +118,17 @@
 
             #endregion
 
+            #region question10
+            //10.	Write a program that uses the ternary operator to check if the temperature is too hot,
+            //too cold, or just good. Assign the result in a variable then display the result. 
 
+            Console.WriteLine("please enter the temp.");
+            bool isTempValid = double.TryParse(Console.ReadLine(), out double temp);
+            string message = isTempValid 
+                ? (temp > 30 ? "just Hot" : temp < 10 ? "just cold." : "The temperature is just good.")
+                : "Invalid input. Please enter a valid number.";
+            Console.WriteLine(message);
+            #endregion
         }
     }
 }
