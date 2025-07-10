@@ -1,8 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
+using System.Runtime.Serialization;
+using System.Security.Claims;
 
 namespace Session_3_C_
+
 {
+    class Point
+    {
+        public int X;
+        public int Y;
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -63,13 +72,28 @@ namespace Session_3_C_
             #region question5
             //5.	Write C# program that Assigning one value type variable to another and modifying the
             //value of one variable and mention what will happen
-
+            /*
             int a = 10;
             int b = a; // b is assigned the value of a b= 10
             b = 20; // modifying b to 20
             Console.WriteLine($"a: {a}, b: {b}"); // a will still be 10, b will be 20. This is because value types are copied by value, not by reference.
+            */
+            #endregion
+
+            #region question6
+            //6.	Write C# program that Assigning one reference type variable to another and modifying
+            //the object through one variable and mention what will happen
+
+            Point p1 = new Point();
+            Point p2 = new Point();
+            p2 = p1; // p2 is assigned the reference of p1, so both p1 and p2 have the same refernce in the heap.
+            p1.X = 10; // modifying p1.X to 10
+            p1.Y = 20; // modifying p1.Y to 20
+            Console.WriteLine($"p1: ({p1.X}, {p1.Y}), p2: ({p2.X}, {p2.Y})"); // p1 and p2 will have the same values because reference types are copied by reference, not by value.
+
 
             #endregion
+
 
             #region question7
             //Write C# program that take two string variables and print them as one variable 
