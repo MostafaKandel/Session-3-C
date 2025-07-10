@@ -51,9 +51,23 @@ namespace Session_3_C_
 
             #region question4
             //Write C# program that Extract a substring from a given string
+
+            /*
             string originalString = "Hello";
             string subString = originalString.Substring(0, 3); // extracting the sub string 'Hel'
             Console.WriteLine($"sub string: {subString}");
+            */
+
+            #endregion
+
+            #region question5
+            //5.	Write C# program that Assigning one value type variable to another and modifying the
+            //value of one variable and mention what will happen
+
+            int a = 10;
+            int b = a; // b is assigned the value of a b= 10
+            b = 20; // modifying b to 20
+            Console.WriteLine($"a: {a}, b: {b}"); // a will still be 10, b will be 20. This is because value types are copied by value, not by reference.
 
             #endregion
 
