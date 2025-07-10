@@ -56,6 +56,17 @@ namespace Session_3_C_
 
             #region question3
             //Write C# program that Perform a simple arithmetic operation with floating-point numbers And mention what will happen
+            int a = 10;
+            int b = 20;
+            double c = 3.5;
+            float d = 4.5f;
+            int sum = a + b; // it will be 30 and, so the result will be an integer.
+            double sum2= c+d; // it will be 8.0 and, so the result will be a double.
+
+            int divid= a/c; // in this case,  compile-time error, because i try to store the double result in an integer variable.
+            double divid2= b/c; // in this case, the result will be a double.
+
+
             #endregion
 
             #region question4
@@ -83,14 +94,14 @@ namespace Session_3_C_
             #region question6
             //6.	Write C# program that Assigning one reference type variable to another and modifying
             //the object through one variable and mention what will happen
-
+            /*
             Point p1 = new Point();
             Point p2 = new Point();
             p2 = p1; // p2 is assigned the reference of p1, so both p1 and p2 have the same refernce in the heap.
             p1.X = 10; // modifying p1.X to 10
             p1.Y = 20; // modifying p1.Y to 20
             Console.WriteLine($"p1: ({p1.X}, {p1.Y}), p2: ({p2.X}, {p2.Y})"); // p1 and p2 will have the same values because reference types are copied by reference, not by value.
-
+            */
 
             #endregion
 
