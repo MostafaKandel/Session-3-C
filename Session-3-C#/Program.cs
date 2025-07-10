@@ -158,13 +158,23 @@ namespace Session_3_C_
 
             #region question13
             //Write a program that allows the user to insert an integer then print negative if it is negative number otherwise print positive.
+
+            /*
             Console.WriteLine("please enter the number");
             bool isInputValid = double.TryParse(Console.ReadLine(), out double inputNumber);
             string message= isInputValid ? (inputNumber < 0 ? "negative" : "positive") : "Invalid input. Please enter a valid number.";
             Console.WriteLine(message);
+            */
             #endregion
 
+            #region question14
+            //Write a program that allows the user to insert an integer number then check If a number is even or odd.
 
+            Console.WriteLine("please enter the number");
+            bool isInputValid = int.TryParse(Console.ReadLine(), out int inputNumber); 
+            string message = isInputValid ? (inputNumber % 2 == 0 ? "even" : "odd") : "Please enter a valid number.";
+            Console.WriteLine(message);
+            #endregion
         }
     }
 }
