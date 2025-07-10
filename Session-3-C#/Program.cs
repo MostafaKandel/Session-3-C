@@ -49,6 +49,8 @@ namespace Session_3_C_
             //Write C# program that Perform a simple arithmetic operation with floating-point numbers And mention what will happen
             #endregion
 
+          
+
             #region question7
             //Write C# program that take two string variables and print them as one variable 
             /*
@@ -179,6 +181,7 @@ namespace Session_3_C_
 
             #region question16
             //Write a program that takes character from the user then if it is a vowel chars (a,e,I,o,u) then print (vowel) otherwise print 
+            /*
             Console.WriteLine("Please enter a character:");
             bool isCharValid = char.TryParse(Console.ReadLine(), out char inputChar);
            
@@ -203,8 +206,46 @@ namespace Session_3_C_
             {
                Console.WriteLine(" Please enter a valid character.");
             }
-            
+            */
+
             #endregion
+
+            #region question17
+            //Write a program to input the month number and print the number of days in that month.
+            /*
+            Console.WriteLine("Please enter the month number:");
+            bool isMonthValid = int.TryParse(Console.ReadLine(), out int month);
+            if (isMonthValid && month >= 1 && month <= 12)
+            {
+                switch (month)
+                {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        Console.WriteLine("31 days");
+                        break;
+                    case 4: 
+                    case 6: 
+                    case 9: 
+                    case 11: 
+                        Console.WriteLine("30 days");
+                        break;
+                    case 2: 
+                        Console.WriteLine("28 or 29 days");
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Please enter a valid month number (1-12).");
+            }
+            */
+            #endregion
+
         }
     }
 }
