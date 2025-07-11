@@ -194,6 +194,40 @@ namespace Session_3_C_
 
             #region question11
             //Write a program that takes the date from the user and displays it in various formats using string interpolation.
+
+            // first approach
+            Console.WriteLine("Please enter the date");
+            bool isDateValid = DateTime.TryParse(Console.ReadLine(), out DateTime date);
+            if (isDateValid)
+            {
+                Console.WriteLine($"Short Date: {date.ToString("MM/dd/yyyy")}");
+                Console.WriteLine($"Long Date: {date.ToString("dddd, dd MMMM yyyy")}");
+                Console.WriteLine($"Full Date and day: {date.ToString("dddd, dd MMMM yyyy")}");
+                Console.WriteLine($"date and time: {date.ToString("MM/dd/yyyy HH:mm")}");
+                Console.WriteLine($"month and day: {date.ToString("MMMM dd")}");
+                Console.WriteLine($"full date and time : {date.ToString("MM/dd/yyyy HH:mm:ss")}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid date format. Please enter a valid date.");
+            }
+
+            // second approach (it is mentioned in the DateTime class class that there are  , ToShortDateString(), ToLongDateString(), )
+            /*
+            Console.WriteLine("Please enter the date");
+            bool isDateValid = DateTime.TryParse(Console.ReadLine(), out DateTime date);
+            if (isDateValid)
+            {
+               Console.WriteLine($"Short Date: {date.ToShortDateString()}");
+               Console.WriteLine($"Long Date: {date.ToLongDateString()}");
+                
+            }
+            else
+            {
+                Console.WriteLine("Invalid date format. Please enter a valid date.");
+            }
+            */
+
             #endregion
 
             #region question12
